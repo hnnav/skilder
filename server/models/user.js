@@ -5,20 +5,12 @@ const userSchema = new mongoose.Schema({
     lastName: String,
     img: String,
     description: String,
-    skills: {
-      HTML: Number,
-      React: Number, 
-      JavaScript: Number,
-      CSS: Number,
-      SCRUM: Number,
-      Python: Number,
-      MongoDB: Number,
-      Express: Number,
-      Figma: Number,
-      GIT: Number,
-      PHP: Number,
-      SQL: Number,
-    }
+    skills: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Skill"
+      }
+    ]
 })
 
 userSchema.set('toJSON', {
