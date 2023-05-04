@@ -17,3 +17,4 @@ Works:
 Not Yet:
 - Update
 - Delete
+- Create with skills
