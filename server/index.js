@@ -16,9 +16,6 @@ app.use(cors());
 app.use(express.json());
 
 // routers
-const skillsRouter = require('./controllers/skills');
-app.use("/api/skills", skillsRouter);
-
 const usersRouter = require('./controllers/users');
 app.use("/api/users", usersRouter);
 

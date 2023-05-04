@@ -4,12 +4,14 @@ const User = require('../models/user.js')
 
 // ROUTES
 
-// POST (Create skill)
+// POST (Create user)
 usersRouter.post('/', (request, response, next) => {
   const body = request.body
   const user = new User({
-    name: body.name,
-    img: body.img
+    firstName: body.firstName,
+    lastName: body.lastName,
+    img: body.img,
+    skills: body.skills
   })
   user.save()
   .then(savedUser => {
@@ -35,5 +37,5 @@ usersRouter.get('/:id', async (request, response) => {
     response.status(404).end()
   }
 })
-  
+
 module.exports = usersRouter;

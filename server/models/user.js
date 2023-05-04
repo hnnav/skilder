@@ -1,8 +1,21 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    name: String,
-    img: String
+    firstName: String,
+    lastName: String,
+    img: String,
+    skills: {
+      HTML: Number,
+      React: Number, 
+      JavaScript: Number,
+      CSS: Number,
+      SCRUM: Number,
+      Python: Number,
+      MERN: Number,
+      Figma: Number,
+      GIT: Number,
+      PHP: Number,
+    }
 })
 
 userSchema.set('toJSON', {

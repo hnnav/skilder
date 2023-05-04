@@ -1,20 +1,8 @@
-Skills:
+Working:
+- Creating users with skills works
+- Get all users works
+- Get user by id works
 
-Works:
-- Create
-- Read all
-- Read one
 Not yet:
-- Update
-- Delete
-
-Users:
-
-Works:
-- Create
-- Read all
-- Read one
-Not Yet:
-- Update
-- Delete
-- Create with skills
+- Updating user data
+- Deleting users
