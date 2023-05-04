@@ -4,6 +4,7 @@ const userSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
     img: String,
+    description: String,
     skills: {
       HTML: Number,
       React: Number, 
@@ -11,10 +12,12 @@ const userSchema = new mongoose.Schema({
       CSS: Number,
       SCRUM: Number,
       Python: Number,
-      MERN: Number,
+      MongoDB: Number,
+      Express: Number,
       Figma: Number,
       GIT: Number,
       PHP: Number,
+      SQL: Number,
     }
 })
 
