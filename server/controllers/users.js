@@ -8,8 +8,8 @@ const User = require('../models/user.js')
 usersRouter.post('/', (request, response, next) => {
   const body = request.body
   const user = new User({
-    firstName: body.firstName,
-    lastName: body.lastName,
+    name: body.name,
+    description: body.description,
     img: body.img,
     skills: body.skills
   })
@@ -42,10 +42,10 @@ usersRouter.get('/:id', async (request, response) => {
 usersRouter.put('/:id', (request, response, next) => {
   const body = request.body
   const user = {
-    firstName: body.firstName,
-    lastName: body.lastName,
+    name: body.name,
+    description: body.description,
     img: body.img,
-    skills: body.skills
+    skills: body.skills  
   }
   User.findByIdAndUpdate(request.params.id, user, { new: true })
     .then(updatedUser => {
