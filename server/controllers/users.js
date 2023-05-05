@@ -38,4 +38,20 @@ usersRouter.get('/:id', async (request, response) => {
   }
 })
 
+// UPDATE
+usersRouter.put('/:id', (request, response, next) => {
+  const body = request.body
+  const user = {
+    firstName: body.firstName,
+    lastName: body.lastName,
+    img: body.img,
+    skills: body.skills
+  }
+  User.findByIdAndUpdate(request.params.id, user, { new: true })
+    .then(updatedUser => {
+      response.json(updatedUser)
+    })
+    .catch(error => next(error))
+})
+
 module.exports = usersRouter;
